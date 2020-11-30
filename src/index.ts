@@ -1,41 +1,15 @@
-import isMobile from './isMobile';
-import isWechat from './isWechat';
-import isIos from './isIos';
-import checkPhoneNumber from './checkPhoneNumber';
-import getUrlQuery from './getUrlQuery';
-import addQueryToUrl from './addQueryToUrl';
-import deleteInvalidValue from './deleteInvalidValue';
-import digitalToCash from './digitalToCash';
-import copyTextToClipboard from './copyTextToClipboard';
-import limitStringToTarget from './limitStringToTarget';
-import removeUrlParams from './removeUrlParams';
+import dsBridge from 'dsbridge';
 
 export {
-  getUrlQuery,
-  addQueryToUrl,
-  checkPhoneNumber,
-  deleteInvalidValue,
-  isIos,
-  isWechat,
-  isMobile,
-  digitalToCash,
-  copyTextToClipboard,
-  limitStringToTarget,
-  removeUrlParams,
+  
 };
 
-export const doraemaon = {
-  getUrlQuery,
-  addQueryToUrl,
-  checkPhoneNumber,
-  deleteInvalidValue,
-  isIos,
-  isWechat,
-  isMobile,
-  digitalToCash,
-  copyTextToClipboard,
-  limitStringToTarget,
-  removeUrlParams,
+export const RAB = {
+  showLoading: () => dsBridge.call('app.showNativeLoading', ''),
+  hideLoading: () => dsBridge.call('app.hideNativeLoading', ''),
+  showToast: (params:{ msg:string }) => dsBridge.call('app.showNativeToast', params),
+  /** 路由跳转 */
+  navigateTo: (params:{ router:string }) => dsBridge.call('app.routerNavigateTo', params),
 };
 
-export default doraemaon;
+export default RAB;

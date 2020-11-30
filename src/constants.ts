@@ -1,1 +1,0 @@
-export const domain = 'https://da.ithen.cn'

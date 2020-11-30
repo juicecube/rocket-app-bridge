@@ -1,7 +1,7 @@
 {
-  "name": "@mlz/doraemon",
-  "version": "0.10.0",
-  "description": "项目常用但lodash又没有的工具函数集合，哆啦A梦般方便实用",
+  "name": "@mlz/rocket-app-bridge",
+  "version": "0.1.0",
+  "description": "H5与小火箭APP交互的SDK，Android & iOS通用",
   "main": "lib/index.js",
   "module": "es/index.js",
   "sideEffects": false,
@@ -18,7 +18,7 @@
     "test:prod": "jest --clearCache && jest --silent",
     "tsc": "tsc --module commonjs",
     "pre-pub": "npm run test:prod && npm run build",
-    "cname": "echo 'https://da.ithen.cn' > docs-dist/CNAME",
+    "cname": "echo 'https://rab.ithen.cn' > docs-dist/CNAME",
     "post-publish": "npm run pre-pub && npm publish --access=public",
     "release": "git checkout master && git pull origin master && git tag v${npm_package_version} && git push origin --tags"
   },
@@ -48,7 +48,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/juicecube/doraemon.git"
+    "url": "git+https://github.com/juicecube/rocket-app-bridge.git"
   },
   "keywords": [
     "mlz",
@@ -58,31 +58,28 @@
   "author": "urnotzane",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/juicecube/doraemon/issues"
+    "url": "https://github.com/juicecube/rocket-app-bridge/issues"
   },
-  "homepage": "https://github.com/juicecube/doraemon#readme",
+  "homepage": "https://github.com/juicecube/rocket-app-bridge#readme",
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@mlz/lint": "^1.1.10",
-    "@types/jest": "^26.0.0",
+    "@types/jest": "^26.0.15",
     "@types/jsdom": "^11.0.4",
-    "@types/lodash": "^4.14.157",
-    "dumi": "^1.0.8",
+    "dumi": "^1.0.37",
     "eslint": "^7.2.0",
-    "father-build": "^1.17.2",
-    "gh-pages": "^3.0.0",
-    "jest": "^26.0.1",
-    "jsdom": "^16.3.0",
-    "lint-staged": "^10.2.10",
+    "father-build": "^1.19.1",
+    "gh-pages": "^3.1.0",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.2",
     "prettier": "^1.19.1",
-    "react-router": "^5.2.0",
-    "ts-jest": "^26.1.0",
+    "ts-jest": "^26.4.4",
     "ts-lint": "^4.5.1",
     "ts-loader": "^7.0.5",
     "typescript": "^3.9.5"
   },
   "dependencies": {
-    "lodash": "^4.17.19"
+    "dsbridge": "^3.1.4"
   }
 }
