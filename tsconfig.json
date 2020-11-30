@@ -18,7 +18,11 @@
     "noImplicitAny": false,
     "checkJs": false,
     "allowJs": false,
-    "strictNullChecks": false
+    "strictNullChecks": false,
+    "types": [
+      "react",
+      "jest"
+    ],
   },
   "include": [
     "src/**/*", "test/**/*"
