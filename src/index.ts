@@ -48,7 +48,7 @@ function forcePortraitScreen(callback) {
   return call('app.forcePortraitScreen', '', callback);
 }
 /** 是否是提审环境，适用于iOS */
-function isReviewEnv(callback?:AnonymousFunction):void;
+function isReviewEnv(callback?:AnonymousFunction):boolean;
 function isReviewEnv(callback) {
   return call('app.isReviewEnv', '', callback);
 }
@@ -60,27 +60,38 @@ function openVideo(params, callback) {
 /** 微信朋友圈分享 */
 function shareWechatTimeline(params:ShareWechatParams, callback?:AnonymousFunction):void;
 function shareWechatTimeline(params, callback) {
-  return call('share_wechat_timeline', params, callback);
+  return call('share_wechat_timeline', {
+    image_base64: params.imageBase64,
+  }, callback);
 }
 /** 微信好友分享 */
 function shareWechatFriends(params:ShareWechatParams, callback?:AnonymousFunction):void;
 function shareWechatFriends(params, callback) {
-  return call('share_wechat_session', params, callback);
+  return call('share_wechat_session', {
+    image_base64: params.imageBase64,
+  }, callback);
 }
 /** 复制链接到粘贴板 */
 function copyLink(params:CopyLinkParams, callback?:AnonymousFunction):void;
 function copyLink(params, callback) {
-  return call('copy_link', params, callback);
+  return call('copy_link', {
+    image_base64: params.imageBase64,
+  }, callback);
 }
 /** 保存图片 */
 function saveImage(params:ShareWechatParams, callback?:AnonymousFunction):void;
 function saveImage(params, callback) {
-  return call('save_photo', params, callback);
+  return call('save_photo', {
+    image_base64: params.imageBase64,
+  }, callback);
 }
 /** ios内购 */
 function iosPurchase(params:IosPurchaseParams, callback?:IosPurchaseCallback):void;
 function iosPurchase(params, callback) {
-  return call('in_app_purchase', params, callback);
+  return call('in_app_purchase', {
+    term_id: params.termId,
+    app_product_id: params.appProductId,
+  }, callback);
 }
 /** 获取APP版本号 */
 function getAppVersion(callback?:AnonymousFunction):string;

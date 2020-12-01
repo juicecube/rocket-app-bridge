@@ -1,6 +1,6 @@
 import { defineConfig } from 'dumi';
 
-const logo = 'https://gallary.ithen.cn/images/2020/07/30/rocket-app-bridge.png';
+const logo = 'https://gallary.ithen.cn/images/2020/12/01/ico_rocket.png';
 export default defineConfig({
   title: 'Rocket app bridge',
   description: 'H5与小火箭APP交互的SDK，Android & iOS通用。',
