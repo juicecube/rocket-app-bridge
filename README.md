@@ -13,34 +13,25 @@ import rocketApp from 'rocket-app-bridge'
 
 rocketApp.showLoading();
 rocketApp.hideLoading();
-rocketApp.navigateTo({ router: '/order' });
-rocketApp.forceLandscapeScreen();
-rocketApp.forcePortraitScreen();
-rocketApp.isReviewEnv();
-rocketApp.openVideo({ url: '' });
-rocketApp.shareWechatTimeline({ imageBase64: 'base64' });
-rocketApp.showLoading();
-rocketApp.showLoading();
-rocketApp.showLoading();
-rocketApp.showLoading();
-rocketApp.showLoading();
-rocketApp.showLoading();
-rocketApp.showLoading();
-rocketApp.showLoading();
-rocketApp.showLoading();
-rocketApp.showLoading();
-rocketApp.showLoading();
-rocketApp.showLoading();
+rocketApp.navigateTo({ router: '/order' }); // 路由跳转
+rocketApp.forceLandscapeScreen(); // 强制横屏
+rocketApp.forcePortraitScreen(); // 强制竖屏
+rocketApp.isReviewEnv(); // 是否iOS提审环境
+rocketApp.openVideo({ url: '' }); // 打开原生视频播放器
+rocketApp.shareWechatTimeline({ imageBase64: 'base64' }); // 分享图片至朋友圈
+rocketApp.shareWechatFriends({ imageBase64: 'base64' }); // 分享图片至微信好友
+rocketApp.copyLink({ url: '' }); // 复制链接至粘贴板
+rocketApp.saveImage({ imageBase64: 'base64' }); // 保存图片至手机相册
+rocketApp.iosPurchase({
+    appProductId: '';
+    termId: '';
+}); // 调起苹果内购
+rocketApp.getAppVersion(); // 返回APP版本号
+rocketApp.openWechatOfficial('公众号名称'); // 返回调用微信APP是否成功
+rocketApp.getHasWechat(); // 返回是否已安装微信APP
+rocketApp.getUserId(); // 返回用户id
+rocketApp.showFailurePage(); // 展示APP失败页面
 ```
-- shareWechatFriends
-- copyLink
-- saveImage
-- iosPurchase
-- getAppVersion
-- openWechatOfficial
-- getHasWechat
-- getUserId
-- showFailurePage
 ## TODO
 
 ## 须知
